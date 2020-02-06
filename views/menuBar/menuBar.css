@@ -1,0 +1,82 @@
+:root {
+  --main-bg-color: brown;
+  --menuBar-rod-height: 3px;
+  --header-icon-sizes: 40px
+}
+
+
+.menuBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  background: rgba(50, 20, 160, 0.5);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+}
+
+.menuBar > div {
+  margin: 20px;
+}
+
+.logo {
+  background-image: url('../../img/sc-logo.png');
+  background-position: center;
+  background-size: contain;
+  width: var(--header-icon-sizes);
+  height: var(--header-icon-sizes);
+
+  cursor: pointer;
+
+  transform: rotateZ(0deg);
+}
+
+.menuButton {
+  width: var(--header-icon-sizes);
+  height: var(--header-icon-sizes);
+
+  background: #fff;
+
+  cursor: pointer;
+}
+
+.menuButton > div {
+  position: relative;
+  left: 50%;
+  top: 50%;
+
+  width: 95%;
+  height: var(--menuBar-rod-height);
+  border-radius: calc( var(--menuBar-rod-height) / 2);
+  background: #000;
+
+  transform-origin: center center;
+  /* transition-duration: 300ms; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.topBar {
+  /* top: calc(33% - var(--menuBar-rod-height) ); */
+  transform: translate(-50%, -300%) rotateZ(0deg);
+  transition-duration: 400ms;
+}
+
+.bottomBar {
+  /* top: calc(66% - var(--menuBar-rod-height) ); */
+  transform: translate(-50%, 100%) rotateZ(0deg);
+  transition-duration: 600ms;
+}
+
+.topBarOpen {
+  transform: translate(-50%, -50%) rotateZ(-135deg) !important;
+}
+
+.bottomBarOpen {
+  transform: translate(-50%, -150%) rotateZ(-225deg) !important;
+}

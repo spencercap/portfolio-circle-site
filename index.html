@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Spencer Cappiello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,700,' rel='stylesheet' type='text/css'>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet"></link> -->
+    <link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link href="dist/flickity/flickity.css" type="text/css" rel="stylesheet"></link> -->
+
+    <style>
+
+        body {
+          margin: 0;
+          font-family: 'Work Sans', sans-serif;
+          font-weight: 400;
+          background: #fff;
+        }
+
+        header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height:  50px;
+          background: red;
+          z-index: 999999999;
+        }
+
+        /* .carousel {
+          background: #EEE;
+        }
+
+        .carousel-cell {
+          width: 66%;
+          height: 200px;
+          margin-right: 10px;
+          background: #8C8;
+          border-radius: 5px;
+          counter-increment: gallery-cell;
+        }
+
+        .carousel-cell:before {
+          display: block;
+          text-align: center;
+          content: counter(gallery-cell);
+          line-height: 200px;
+          font-size: 80px;
+          color: white;
+        } */
+
+        /* CSS ANIMATIONS */
+        .fader-out
+        {
+            animation-name: fader-out;
+            animation-duration: 200ms;
+            animation-timing-function: linear;
+        }
+
+        .swipe-left
+        {
+            animation-name: swipe-left;
+            animation-duration: 200ms;
+            animation-timing-function: linear;
+        }
+
+        @keyframes swipe-left
+        {
+            0%
+            {
+                left: -100vw;
+                opacity: 0;
+            }
+
+            100%
+            {
+                left: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fader-out
+        {
+            0%
+            {
+                opacity: 1;
+            }
+
+            100%
+            {
+                opacity: 0;
+            }
+        }
+
+        /* MEDIA QUERIES */
+        @media (min-width: 666px) {}
+        @media (min-width: 500px) and (max-width: 665px) {}
+        @media (min-width: 311px) and (max-width: 499px) {}
+        @media (max-width: 310px) {}
+    </style>
+
+    <!-- scripts -->
+    <script src="positron/prefixfree.min.js" type="text/javascript"></script>
+    <script src="positron/prefixfree.dynamic-dom.min.js" type="text/javascript"></script>
+    <script src="monohm.js" type="text/javascript"></script>
+    <script src="positron/positron.js" type="text/javascript"></script>
+    <script src="dist/flickity/flickity.pkgd.min.js" type="text/javascript"></script>
+
+    <script>
+        console.log("%coh hey, i made this jazzy site with monohm's framework positron.", 'background: #ef976b; color: #fff; font-size: 16px;');
+        console.log("%chttp://positron.mono.hm/", 'background: #ef976b; color: #fff; font-size: 16px;');
+    </script>
+
+</head>
+<body>
+
+  <div p-view="main7"></div>
+  <!-- <div p-view="project"></div> -->
+
+</body>
+</html>

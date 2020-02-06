@@ -1,0 +1,133 @@
+.projectView[p-view="projectViewSonancy"] > .name {
+  color: var(--project-color-sonancy);
+}
+
+.projectView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  will-change: transform;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectView.p-transition-visible {
+  animation: slideup 250ms ease-out both;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.projectView .close {
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  /* background-color: transparent; */
+  background-image: url('../../img/close.svg');
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(red, blue); */
+
+  width: var(--header-icon-sizes);
+  height: var(--header-icon-sizes);
+  border-radius: 50%;
+  transition-duration: 200ms;
+  will-change: transform, right;
+
+  transform: rotateZ(0deg);
+
+  z-index: 100;
+}
+
+.projectView .close:hover {
+
+  background-color: #f1f1f1;
+}
+
+.projectView.p-visible > .close {
+  animation: slideleft 120ms ease-out 600ms both;
+}
+
+@keyframes slideleft {
+  0% {
+    right: -40px;
+    transform: rotateZ(240deg);
+  }
+  100% {
+    right: 20px;
+    transform: rotateZ(0deg);
+  }
+}
+
+.projectView .name {
+  top: 80px;
+  left: 0;
+
+  text-align: center;
+  padding: 100px 0 20px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.videoContainer {
+  position: relative;
+  width: 600px;
+
+  margin: auto;
+  display: block;
+  padding-bottom: 56.2vh;
+}
+
+.videoContainer > iframe {
+  display: block;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .videoContainer {
+    width: 100%;
+  }
+}
+
+
+.project-image {
+  width: 800px;
+  max-width: 100%;
+  padding: 20px 0;
+  object-fit: contain;
+}
+
+.project-image:nth-child(2n) {
+  margin-left: auto;
+}
+
+.project-image:nth-child(2n + 1) {
+  margin-right: auto;
+}
+
+.about {
+  width: 560px;
+  max-width: 90%;
+}
